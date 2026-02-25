@@ -28,7 +28,7 @@ while True:
 # --Email validation--
 
 while True:
-    email = input("Enter Email address")
+    email = input("Enter Email address:")
     if re.fullmatch(r"[^@]+@[^@]+\.[^@]+", email):
         parent['email'] = email
         break
@@ -42,7 +42,7 @@ parent['Relationship_to_Child'] = input("Enter Relationship_to_Child: ")
 print("Preferred Method of Communication")
 
 methods = {
-    "1": "WhatApp",
+    "1": "WhatsApp",
     "2": "Phone call",
     "3": "Email"
 }
@@ -168,7 +168,7 @@ print(f"Parent: {parent['Name']} - {parent['phone']} - {parent['email']} - {pare
 print(f"Number of children registered: {len(parent['children'])}\n")
 
 for idx, c in enumerate(parent['children'], 1):
-    print(f"Child {idx}: {c['name']}, DOB: {c['dob']}, Grade: {c['grade']}")
+    print(f"Child {idx}: {c['Name']}, DOB: {c['dob']}, Grade: {c['Grade']}")
     print(f"Courses: {c['courses']}")
     print(f"Previous Knowledge: {c['previous_knowledge']}")
     print(f"Special Needs: {c['special_learning_needs']}\n")
